@@ -20,7 +20,8 @@ function buscarPokemon(id){
 }
 
 function mostrarPokemon(dataPokemon){
-    let type=dataPokemon.types.map(index=>index.type.name).join(", ")
+    let tipos=dataPokemon.types.map(index=>`<p class="${index.type.name}">${index.type.name}</p>`);
+    tipos=tipos.join("");
     let abilities=dataPokemon.abilities.map(index=>index.ability.name).join(", ");
 
     card.innerHTML=`
@@ -31,7 +32,8 @@ function mostrarPokemon(dataPokemon){
             <p class="id">Numero:${dataPokemon.id}</p>
             <p class="peso">Peso:${dataPokemon.weight/10}kg</p>
             <p class="medida">Medida:${dataPokemon.height/10}m</p>
-            <p class="tipo">Tipo: <span>${type}</span></p>
+            <p class="tipo">tipo:</p>
+            ${tipos}
             <p class="habilidades">Habilidades: <span>${abilities}</span></p>
     </div>
     </div>
