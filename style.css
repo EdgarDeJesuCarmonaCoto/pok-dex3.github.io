@@ -1,0 +1,165 @@
+/* Estilos globales */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #ff3e3e;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+/* Estilos del buscador */
+.input {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.input input {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.input button {
+    padding: 10px;
+    background-color: #ff3e3e;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input button:hover {
+    background-color: #cc3232;
+}
+
+/* Contenedor de las cartas */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Diseño de la tarjeta */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+}
+
+.nombre {
+    font-size: 1.5rem;
+    color: #ff3e3e;
+}
+
+.id{
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color:black;
+}
+
+.peso {
+    background-color: #ff7f7f;
+    color: white;
+}
+
+.medida {
+    background-color: #ffa8a8;
+    color: white;
+}
+.error {
+    font-size: 1.5rem;
+    color: #fff; /* Texto blanco para alto contraste */
+    background-color: #ff4c4c; /* Rojo brillante para el fondo */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil para resaltar el mensaje */
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ff3e3e;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #cc3232;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: #a12b2b;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
